@@ -1,3 +1,6 @@
+import java.util.IntSummaryStatistics;
+import java.util.stream.IntStream;
+
 /*
 
    =head1 ABOUT
@@ -42,21 +45,11 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 */
 public class FizzBuzz {
-    public static void main (String[] args) {
-        for (int i = 1 ; i <= 100; ++i)
-        {
-            boolean div3 = (i % 3 == 0);
-            boolean div5 = (i % 5 == 0);
-            if (div3 || div5)
-            {
-                System.out.println((div3 && div5) ? "FizzBuzz" :
-                        div3 ? "Fizz" :
-                        "Buzz");
-            }
-            else
-            {
-                System.out.println(i);
-            }
-        }
-    }
+  public static void main (String[] args) {
+    IntStream.rangeClosed(0, 100).mapToObj(
+        i -> i % 3 == 0 ?
+            (i % 5 == 0 ? "FizzBuzz" : "Fizz") :
+            (i % 5 == 0 ? "Buzz" : i))
+        .forEach(System.out::println);
+  }
 }
