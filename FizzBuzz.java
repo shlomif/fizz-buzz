@@ -1,6 +1,3 @@
-import java.util.IntSummaryStatistics;
-import java.util.stream.IntStream;
-
 /*
 
    =head1 ABOUT
@@ -44,6 +41,8 @@ OTHER DEALINGS IN THE SOFTWARE.
 =cut
 
 */
+import java.util.stream.IntStream;
+
 public class FizzBuzz {
   public static void main (String[] args) {
     IntStream.rangeClosed(0, 100).mapToObj(
