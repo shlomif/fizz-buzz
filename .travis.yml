@@ -13,4 +13,4 @@ install:
 perl:
     - "5.26"
 script:
-    - export PATH="`pwd`/Tests/travis-ci-hacks/bin:$PATH" ; unset GOPATH ; make test
+    - export PATH="`pwd`/Tests/travis-ci-hacks/bin:$PATH" ; unset GOPATH GOROOT ; make test
