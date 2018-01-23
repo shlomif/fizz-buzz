@@ -1,4 +1,4 @@
 all:
 
 test:
-	prove Tests/*.t
+	prove Tests/*.{py,t}

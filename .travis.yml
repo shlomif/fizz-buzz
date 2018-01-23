@@ -10,6 +10,7 @@ install:
     - python3 --version
     - sudo -H `which python3` -m pip install cffi
     - sudo -H `which python3` -m pip install random2
+    - sudo -H `which python3` -m pip install pycotap
     - sudo cpanm --notest Test::TrailingSpace
 perl:
     - "5.26"
