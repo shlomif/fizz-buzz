@@ -30,6 +30,8 @@ class MyTests(unittest.TestCase):
     def test_output(self):
         self._read_good_output()
         self.assertEqual(1, 1)
+        self._my_test_source({'src': 'fizz-buzz.awk',
+                              'exes': [['gawk', '-f'], ['mawk', '-f']]})
         self._my_test_source({'src': 'fizz-buzz.pl', 'exes': [['perl']]})
         self._my_test_source({'src': 'fizz-buzz.py',
                               'exes': [['python2'], ['python3']]})
