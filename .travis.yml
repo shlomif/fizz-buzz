@@ -13,4 +13,4 @@ install:
 perl:
     - "5.26"
 script:
-    - SHELL=/bin/bash make test
+    - make test
