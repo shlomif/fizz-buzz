@@ -14,3 +14,10 @@ For more information, see:
 * [FizzBuzz on Rosetta Code](http://rosettacode.org/wiki/FizzBuzz) (WARNING! The licence is problematic.)
 * [FizzBuzz Enterprise Edition](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition)
 * [FizzBuzz in every programming language](https://github.com/zenware/FizzBuzz) - under a non-specified licence.
+
+## Features of this project
+
+* Licensed under the permissive [MIT / Expat licence](https://en.wikipedia.org/wiki/MIT_License).
+* Contains implementations in several popular and not-so-popular languages including C, Python, Perl 5, Ruby, sh, Java, C#, Awk, Scheme, D, Go, Rust, and Haskell.
+* Implementations are modular but not over-engineered.
+* Contains a test suite and uses Travis-CI.
