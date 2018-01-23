@@ -34,6 +34,7 @@ class MyTests(unittest.TestCase):
                               'exes': [['gawk', '-f'], ['mawk', '-f']]})
         self._my_test_source({'src': 'fizz-buzz.go', 'exes': [['go', 'run']]})
         self._my_test_source({'src': 'fizz-buzz.hs', 'exes': [['runhugs']]})
+        self._my_test_source({'src': 'fizz-buzz.lua', 'exes': [['lua']]})
         self._my_test_source({'src': 'fizz-buzz.js', 'exes': [['node']]})
         self._my_test_source({'src': 'fizz-buzz.pl', 'exes': [['perl']]})
         self._my_test_source({'src': 'fizz-buzz.py',
