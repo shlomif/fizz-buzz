@@ -32,6 +32,7 @@ class MyTests(unittest.TestCase):
         self.assertEqual(1, 1)
         self._my_test_source({'src': 'fizz-buzz.awk',
                               'exes': [['gawk', '-f'], ['mawk', '-f']]})
+        self._my_test_source({'src': 'fizz-buzz.js', 'exes': [['node']]})
         self._my_test_source({'src': 'fizz-buzz.pl', 'exes': [['perl']]})
         self._my_test_source({'src': 'fizz-buzz.py',
                               'exes': [['python2'], ['python3']]})
