@@ -37,6 +37,10 @@ class MyTests(unittest.TestCase):
         self._my_test_source({'src': 'fizz-buzz.pl', 'exes': [['perl']]})
         self._my_test_source({'src': 'fizz-buzz.py',
                               'exes': [['python2'], ['python3']]})
+        self._my_test_source({'src': 'fizz-buzz.rb',
+                              'exes': [['ruby']]})
+        self._my_test_source({'src': 'fizz-buzz.sh',
+                              'exes': [['bash'], ['sh'], ['zsh']]})
 
 
 if __name__ == '__main__':
