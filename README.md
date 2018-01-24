@@ -15,6 +15,13 @@ For more information, see:
 * [FizzBuzz Enterprise Edition](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition)
 * [FizzBuzz in every programming language](https://github.com/zenware/FizzBuzz) - under a non-specified licence.
 
+### Description of the problem
+
+Print the natural numbers from 1 to 100, one in each line, but if the number
+is divisible by 3 print "Fizz" (without the quotes) instead and if it is
+divisible by 5 print "Buzz" instead and if it is divisible by both 3 and 5,
+print "FizzBuzz".
+
 ## Features of this project
 
 * Licensed under the permissive [MIT / Expat licence](https://en.wikipedia.org/wiki/MIT_License).
