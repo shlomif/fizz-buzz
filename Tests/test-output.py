@@ -32,6 +32,8 @@ class MyTests(unittest.TestCase):
         self.assertEqual(1, 1)
         self._my_test_source({'src': 'fizz-buzz.awk',
                               'exes': [['gawk', '-f'], ['mawk', '-f']]})
+        self._my_test_source({'src': 'fizz-buzz.cmake',
+                              'exes': [['cmake', '-P', '2>&1']]})
         self._my_test_source({'src': 'fizz-buzz.go', 'exes': [['go', 'run']]})
         self._my_test_source({'src': 'fizz-buzz.hs', 'exes': [['runhugs']]})
         self._my_test_source({'src': 'fizz-buzz.lua', 'exes': [['lua']]})
