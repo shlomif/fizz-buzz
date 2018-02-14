@@ -23,11 +23,7 @@
 ; enumerate (print) function(x) for the range [ii,jj)
 (defun enumerate (cb ii jj)
   (loop for i from ii to jj
-        do
-        (format t "~A~%" (funcall cb i))
-        ))
+        do (format t "~A~%" (funcall cb i))))
 
 ; run fizzbuzz on the range [20,40)
 (enumerate #'fizzbuzz 1 100)
-
-; EOF
