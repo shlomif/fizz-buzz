@@ -37,11 +37,13 @@
 \ =cut
 \ FizzBuzz
 
+: .nospace  ( n -- )  s>d <# #s #> type ;
 : divisible?  ( a u n1 n2 -- flag )
   mod 0= if type true else 2drop false then ;
 : Fizz?  ( n -- flag )  s" Fizz" rot 3 divisible? ;
 : Buzz?  ( n -- flag )  s" Buzz" rot 5 divisible? ;
-: Fizz?Buzz?  ( n -- )  dup Fizz? over Buzz? or if drop else . then ;
+: Fizz?Buzz?  ( n -- )
+  dup Fizz? over Buzz? or if drop else .nospace then ;
 
 : FizzBuzz  101 1 do i Fizz?Buzz? cr loop ;
 
