@@ -5,13 +5,6 @@ import unittest
 
 
 class MyTests(unittest.TestCase):
-    def test_that_it_passes(self):
-        self.assertEqual(0, 0)
-
-    @unittest.skip("not finished yet")
-    def test_that_it_skips(self):
-        raise Exception("Does not happen")
-
     def _read_good_output(self):
         txt = None
         with open('./fizz-buzz.txt', 'r') as f:
@@ -29,7 +22,6 @@ class MyTests(unittest.TestCase):
 
     def test_output(self):
         self._read_good_output()
-        self.assertEqual(1, 1)
         self._my_test_source({'src': 'fizz-buzz.awk',
                               'exes': [['gawk', '-f'], ['mawk', '-f']]})
         self._my_test_source({'src': 'fizz-buzz.bash', 'exes': [['bash']]})
