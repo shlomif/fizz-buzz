@@ -22,23 +22,21 @@ class MyTests(unittest.TestCase):
 
     def test_output(self):
         self._read_good_output()
-        self._my_test_source({'src': 'fizz-buzz.awk',
-                              'exes': [['gawk', '-f'], ['mawk', '-f']]})
-        self._my_test_source({'src': 'fizz-buzz.bash', 'exes': [['bash']]})
-        self._my_test_source({'src': 'fizz-buzz.cmake',
-                              'exes': [['cmake', '-P', '2>&1']]})
-        self._my_test_source({'src': 'fizz-buzz.go', 'exes': [['go', 'run']]})
-        self._my_test_source({'src': 'fizz-buzz.hs', 'exes': [['runhugs']]})
-        self._my_test_source({'src': 'fizz-buzz.lisp', 'exes': [['clisp']]})
-        self._my_test_source({'src': 'fizz-buzz.lua', 'exes': [['lua']]})
-        self._my_test_source({'src': 'fizz-buzz.js', 'exes': [['node']]})
-        self._my_test_source({'src': 'fizz-buzz.pl', 'exes': [['perl']]})
-        self._my_test_source({'src': 'fizz-buzz.py',
-                              'exes': [['python2'], ['python3']]})
-        self._my_test_source({'src': 'fizz-buzz.rb',
-                              'exes': [['ruby']]})
-        self._my_test_source({'src': 'fizz-buzz.sh',
-                              'exes': [['bash'], ['sh'], ['zsh']]})
+
+        def t(case):
+            return self._my_test_source(case)
+        t({'src': 'fizz-buzz.awk', 'exes': [['gawk', '-f'], ['mawk', '-f']]})
+        t({'src': 'fizz-buzz.bash', 'exes': [['bash']]})
+        t({'src': 'fizz-buzz.cmake', 'exes': [['cmake', '-P', '2>&1']]})
+        t({'src': 'fizz-buzz.go', 'exes': [['go', 'run']]})
+        t({'src': 'fizz-buzz.hs', 'exes': [['runhugs']]})
+        t({'src': 'fizz-buzz.lisp', 'exes': [['clisp']]})
+        t({'src': 'fizz-buzz.lua', 'exes': [['lua']]})
+        t({'src': 'fizz-buzz.js', 'exes': [['node']]})
+        t({'src': 'fizz-buzz.pl', 'exes': [['perl']]})
+        t({'src': 'fizz-buzz.py', 'exes': [['python2'], ['python3']]})
+        t({'src': 'fizz-buzz.rb', 'exes': [['ruby']]})
+        t({'src': 'fizz-buzz.sh', 'exes': [['bash'], ['sh'], ['zsh']]})
 
 
 if __name__ == '__main__':
