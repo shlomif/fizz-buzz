@@ -13,4 +13,5 @@ install:
 perl:
     - "5.26"
 script:
+    - export PATH="`pwd`/Tests/travis-ci-hacks/bin:$PATH" ; unset GOPATH GOROOT ; prove -v Tests/test-output.py
     - export PATH="`pwd`/Tests/travis-ci-hacks/bin:$PATH" ; unset GOPATH GOROOT ; make test
