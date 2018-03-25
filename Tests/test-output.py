@@ -38,6 +38,7 @@ class MyTests(unittest.TestCase):
         t({'src': 'fizz-buzz.py', 'exes': [['python2'], ['python3']]})
         t({'src': 'fizz-buzz.rb', 'exes': [['ruby']]})
         t({'src': 'fizz-buzz.sh', 'exes': [['bash'], ['sh'], ['zsh']]})
+        t({'src': 'fizz-buzz.tcl', 'exes': [['tclsh']]})
 
 
 if __name__ == '__main__':
