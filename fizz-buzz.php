@@ -1,4 +1,4 @@
-<?
+<?php
 foreach (range(1, 100) as $i)
 {
     $div3 = ($i % 3 == 0);
