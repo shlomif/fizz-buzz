@@ -33,6 +33,7 @@ class MyTests(unittest.TestCase):
         t({'src': 'fizz-buzz.lisp', 'exes': [['clisp']]})
         t({'src': 'fizz-buzz.lua', 'exes': [['lua']]})
         t({'src': 'fizz-buzz.js', 'exes': [['node']]})
+        t({'src': 'fizz-buzz.php', 'exes': [['php']]})
         t({'src': 'fizz-buzz.pl', 'exes': [['perl']]})
         t({'src': 'fizz-buzz.py', 'exes': [['python2'], ['python3']]})
         t({'src': 'fizz-buzz.rb', 'exes': [['ruby']]})
