@@ -14,6 +14,8 @@
 % ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 % OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
+% Taken from https://github.com/anglus/fizzbuzz and modified, thanks!
+
 :- initialization(main).
 
 fizzbuzz(N,'FizzBuzz') :- N mod 3 =:= 0, N mod 5 =:= 0.
