@@ -29,6 +29,8 @@ class MyTests(unittest.TestCase):
         t({'src': 'fizz-buzz.bash', 'exes': [['bash']]})
         t({'src': 'fizz-buzz.cmake', 'exes': [['cmake', '-P', '2>&1']]})
         t({'src': 'fizz-buzz.go', 'exes': [['go', 'run']]})
+        # t({'src': 'fizz-buzz.gprolog.prolog', 'exes':
+        #    [['gprolog', '--consult-file']]})
         t({'src': 'fizz-buzz.hs', 'exes': [['runhugs']]})
         t({'src': 'fizz-buzz.lisp', 'exes': [['clisp']]})
         t({'src': 'fizz-buzz.lua', 'exes': [['lua']]})
