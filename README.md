@@ -28,3 +28,7 @@ print "FizzBuzz".
 * Contains implementations in several popular and not-so-popular languages including C, Python, Perl 5, Ruby, sh, Java, C#, Awk, Scheme, D, Go, Rust, and Haskell.
 * Implementations are modular but not over-engineered.
 * Contains a test suite and uses Travis-CI.
+
+## Links
+
+* [fizzbuzz by anglus](https://github.com/anglus/fizzbuzz) - under the ISC licence and public domain, but the output is in all lowercase.
