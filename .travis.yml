@@ -1,5 +1,6 @@
 os: linux
-dist: trusty
+# dist: trusty
+dist: xenial
 python:
     - '3.6'
 before_install:
@@ -13,5 +14,6 @@ install:
 perl:
     - "5.26"
 script:
-    - export PATH="`pwd`/Tests/travis-ci-hacks/bin:$PATH" ; unset GOPATH GOROOT ; prove -v Tests/test-output.py
-    - export PATH="`pwd`/Tests/travis-ci-hacks/bin:$PATH" ; unset GOPATH GOROOT ; make test
+    - export PATH="`pwd`/Tests/travis-ci-hacks/bin:$PATH" ; unset GOPATH GOROOT
+    - prove -v Tests/test-output.py
+    - make test
