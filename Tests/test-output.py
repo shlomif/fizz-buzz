@@ -25,24 +25,29 @@ class MyTests(unittest.TestCase):
 
         def t(case):
             return self._my_test_source(case)
-        t({'src': 'fizz-buzz.awk', 'exes': [['gawk', '-f'], ['mawk', '-f']]})
-        t({'src': 'fizz-buzz.bash', 'exes': [['bash']]})
-        t({'src': 'fizz-buzz.cmake', 'exes': [['cmake', '-P', '2>&1']]})
-        t({'src': 'fizz-buzz.go', 'exes': [['go', 'run']]})
+
+        def d(src, *exes):
+            return t({'src': src, 'exes': [[x] if isinstance(x, str) else x
+                                           for x in exes]})
+
+        d('fizz-buzz.awk', ['gawk', '-f'], ['mawk', '-f'])
+        d('fizz-buzz.bash', 'bash')
+        d('fizz-buzz.cmake', ['cmake', '-P', '2>&1'])
+        d('fizz-buzz.go', ['go', 'run'])
         # t({'src': 'fizz-buzz.gprolog.prolog', 'exes':
         #    [['gprolog', '--consult-file']]})
-        t({'src': 'fizz-buzz.hs', 'exes': [['runhugs']]})
-        t({'src': 'fizz-buzz.lisp', 'exes': [['clisp']]})
-        t({'src': 'fizz-buzz.lua', 'exes': [['lua']]})
-        t({'src': 'fizz-buzz.jl', 'exes': [['julia']]})
-        t({'src': 'fizz-buzz.js', 'exes': [['node']]})
-        t({'src': 'fizz-buzz.ocaml', 'exes': [['ocaml']]})
-        t({'src': 'fizz-buzz.php', 'exes': [['php']]})
-        t({'src': 'fizz-buzz.pl', 'exes': [['perl']]})
-        t({'src': 'fizz-buzz.py', 'exes': [['python2'], ['python3']]})
-        t({'src': 'fizz-buzz.rb', 'exes': [['ruby']]})
-        t({'src': 'fizz-buzz.sh', 'exes': [['bash'], ['sh'], ['zsh']]})
-        t({'src': 'fizz-buzz.tcl', 'exes': [['tclsh']]})
+        d('fizz-buzz.hs', 'runhugs')
+        d('fizz-buzz.lisp', 'clisp')
+        d('fizz-buzz.lua', 'lua')
+        d('fizz-buzz.jl', 'julia')
+        d('fizz-buzz.js', 'node')
+        d('fizz-buzz.ocaml', 'ocaml')
+        d('fizz-buzz.php', 'php')
+        d('fizz-buzz.pl', 'perl')
+        d('fizz-buzz.py', 'python2', 'python3')
+        d('fizz-buzz.rb', 'ruby')
+        d('fizz-buzz.sh', 'bash', 'sh', 'zsh')
+        d('fizz-buzz.tcl', 'tclsh')
 
 
 if __name__ == '__main__':
