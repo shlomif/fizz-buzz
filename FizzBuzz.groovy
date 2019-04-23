@@ -1,9 +1,9 @@
 /*
 
-   Copyright 2017 by SiGe
+Copyright 2017 by SiGe
 
-   This program is distributed under the MIT / Expat License:
-   L<http://www.opensource.org/licenses/mit-license.php>
+This program is distributed under the MIT / Expat License:
+L<http://www.opensource.org/licenses/mit-license.php>
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
