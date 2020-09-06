@@ -33,6 +33,7 @@ class MyTests(unittest.TestCase):
         d('fizz-buzz.awk', ['gawk', '-f'], ['mawk', '-f'])
         d('fizz-buzz.bash', 'bash')
         d('fizz-buzz.cmake', ['cmake', '-P', '2>&1'])
+        d('fizz-buzz.csh', 'csh', 'tcsh')
         d('fizz-buzz.go', ['go', 'run'])
         # t({'src': 'fizz-buzz.gprolog.prolog', 'exes':
         #    [['gprolog', '--consult-file']]})
