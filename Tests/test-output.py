@@ -30,6 +30,7 @@ class MyTests(unittest.TestCase):
             return t({'src': src, 'exes': [[x] if isinstance(x, str) else x
                                            for x in exes]})
 
+        d('fizz_buzz.nim', ['nim', '-r', 'c'])
         d('fizz-buzz.awk', ['gawk', '-f'], ['mawk', '-f'])
         d('fizz-buzz.bash', 'bash')
         d('fizz-buzz.cmake', ['cmake', '-P', '2>&1'])
