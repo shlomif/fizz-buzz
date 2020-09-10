@@ -14,5 +14,6 @@ perl:
     - "5.26"
 script:
     - export PATH="`pwd`/Tests/travis-ci-hacks/bin:$PATH" ; unset GOPATH GOROOT
+    - "precompile_nim_to_avoid_problem_output() { nim c fizz_buzz.nim ; } ; precompile_nim_to_avoid_problem_output"
     - prove -v Tests/test-output.py
     - make test
