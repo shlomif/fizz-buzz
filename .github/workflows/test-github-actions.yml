@@ -7,6 +7,14 @@ jobs:
               with:
                 node-version: '14'
             - run: sudo apt-get update -qq
-            - run: sudo apt-get --no-install-recommends install -y clisp cmake cpanminus csh gawk golang hugs julia libperl-dev lua5.2 mawk nim ocaml php-cli python2 python3 python3-setuptools perl python3-pip tclsh tcsh zsh
+            - run: sudo apt-get --no-install-recommends install -y clisp cmake cpanminus csh gawk golang hugs julia libperl-dev lua5.2 mawk nim ocaml php-cli python2 python3 python3-setuptools perl python3-pip ruby tclsh tcsh zsh
+            - run: which python3
+            - run: python3 --version
+            - run: sudo -H `which python3` -m pip install flake8 pycotap
+            - run: sudo cpanm --notest File::Which String::ShellQuote Test::Differences Test::TrailingSpace
+            - run: export PATH="`pwd`/Tests/travis-ci-hacks/bin:$PATH" ; unset GOPATH GOROOT
+            - run: "precompile_nim_to_avoid_problem_output() { nim c fizz_buzz.nim ; } ; precompile_nim_to_avoid_problem_output"
+            - run: prove -v Tests/test-output.py
+            - run: make test
 name: test-github-actions
 on: [push]
