@@ -1,0 +1,12 @@
+jobs:
+    check-bats-version:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                node-version: '14'
+            - run: sudo apt-get update -qq
+            - run: sudo apt-get --no-install-recommends install -y clisp cmake cpanminus csh gawk golang hugs julia libperl-dev lua5.2 mawk nim ocaml php-cli python2 python3 python3-setuptools perl python3-pip tclsh tcsh zsh
+name: test-github-actions
+on: [push]
