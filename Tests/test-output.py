@@ -27,8 +27,15 @@ class MyTests(unittest.TestCase):
             return self._my_test_source(case)
 
         def d(src, *exes):
-            return t({'src': src, 'exes': [[x] if isinstance(x, str) else x
-                                           for x in exes]})
+            return t(
+                {
+                    'src': src,
+                    'exes': [
+                        [x] if isinstance(x, str) else x
+                        for x in exes
+                    ]
+                }
+            )
 
         d('fizz_buzz.nim', ['nim', '-r', 'c'])
         d('fizz-buzz.awk', ['gawk', '-f'], ['mawk', '-f'])
