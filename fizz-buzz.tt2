@@ -1,0 +1,17 @@
+[% SET i = 1 -%]
+[%- WHILE i <= 100 -%]
+[%- IF i % 3 == 0 -%]
+[%- IF i % 5 == 0 -%]
+FizzBuzz
+[% ELSE -%]
+Fizz
+[% END -%]
+[% ELSE -%]
+[%- IF i % 5 == 0 -%]
+Buzz
+[% ELSE -%]
+[% i %]
+[% END -%]
+[% END -%]
+[% SET i = i + 1 -%]
+[%- END -%]

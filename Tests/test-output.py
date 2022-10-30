@@ -37,7 +37,7 @@ class MyTests(unittest.TestCase):
                 }
             )
 
-        d('fizz_buzz.nim', ['nim', '-r', 'c'])
+        # d('fizz_buzz.nim', ['nim', '-r', 'c'])
         d('fizz-buzz.awk', ['gawk', '-f'], ['mawk', '-f'])
         d('fizz-buzz.bash', 'bash')
         d('fizz-buzz.cmake', ['cmake', '-P', '2>&1'])
@@ -53,10 +53,12 @@ class MyTests(unittest.TestCase):
         d('fizz-buzz.ocaml', 'ocaml')
         d('fizz-buzz.php', 'php')
         d('fizz-buzz.pl', 'perl')
-        d('fizz-buzz.py', 'python2', 'python3')
+        # d('fizz-buzz.py', 'python2', 'python3')
+        d('fizz-buzz.py', 'python3')
         d('fizz-buzz.rb', 'ruby')
         d('fizz-buzz.sh', 'bash', 'sh', 'zsh')
         d('fizz-buzz.tcl', 'tclsh')
+        d('fizz-buzz.tt2', 'tpage')
 
 
 if __name__ == '__main__':
