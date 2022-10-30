@@ -11,7 +11,7 @@ jobs:
             - run: which python3
             - run: python3 --version
             - run: sudo -H `which python3` -m pip install flake8 pycotap
-            - run: sudo cpanm --notest File::Which String::ShellQuote Test::Differences Test::TrailingSpace
+            - run: sudo cpanm --notest File::Which String::ShellQuote Template Test::Differences Test::TrailingSpace
             - run: export PATH="`pwd`/Tests/travis-ci-hacks/bin:$PATH" ; unset GOPATH GOROOT
             - run: "precompile_nim_to_avoid_problem_output() { nim c fizz_buzz.nim ; } ; precompile_nim_to_avoid_problem_output"
             - run: prove -v Tests/test-output.py
