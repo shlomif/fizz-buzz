@@ -1,5 +1,4 @@
-[% SET i = 1 -%]
-[%- WHILE i <= 100 -%]
+[%- FOREACH i IN [ 1 .. 100 ] -%]
 [%- IF i % 3 == 0 -%]
 [%- IF i % 5 == 0 -%]
 FizzBuzz
@@ -13,5 +12,4 @@ Buzz
 [% i %]
 [% END -%]
 [% END -%]
-[% SET i = i + 1 -%]
 [%- END -%]
