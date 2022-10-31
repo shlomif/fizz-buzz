@@ -1,15 +1,19 @@
 [%- FOREACH i IN [ 1 .. 100 ] -%]
 [%- IF i % 3 == 0 -%]
+
 [%- IF i % 5 == 0 -%]
 FizzBuzz
 [% ELSE -%]
 Fizz
 [% END -%]
-[% ELSE -%]
+
+[%- ELSE -%]
+
 [%- IF i % 5 == 0 -%]
 Buzz
 [% ELSE -%]
 [% i %]
 [% END -%]
-[% END -%]
+
+[%- END -%]
 [%- END -%]
